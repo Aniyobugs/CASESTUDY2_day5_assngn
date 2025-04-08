@@ -74,7 +74,7 @@ app.delete('/api/employeelist/:id', async (req, res) => {
 app.put('/api/employeelist', async (req, res) => {
     try {
         var update = await emodel.findOneAndUpdate({_id:req.body._id},req.body,{new : true});
-          res.send("updated");
+          res.send();
     } catch (error) {
         res.send(error)
     }
